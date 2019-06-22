@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE988F63-A7A6-4A97-962D-CCBE09DF7A53}</ProjectGuid>
+    <ProjectGuid>{0DFD1A30-1D22-4F07-B160-798B67521388}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Izh_08_tasks</RootNamespace>
-    <AssemblyName>Izh-08_tasks</AssemblyName>
+    <RootNamespace>Izh_09_tasks</RootNamespace>
+    <AssemblyName>Izh-09_tasks</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -24,7 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\Izh-09_tasks\Izh-09_tasks.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>Izh-09_tasks.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,7 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\Izh-09_tasks\Izh-09_tasks.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>Izh-09_tasks.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,20 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeometryShapes\Circle.cs" />
-    <Compile Include="GeometryShapes\Shape.cs" />
-    <Compile Include="GeometryShapes\Rectangle.cs" />
-    <Compile Include="GeometryShapes\Square.cs" />
-    <Compile Include="GeometryShapes\Triangle.cs" />
-    <Compile Include="Operations.cs" />
-    <Compile Include="Polynomials\Polynomial.cs" />
-    <Compile Include="RefactoredBubbleSortClass.cs" />
+    <Compile Include="Task_1\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test\PolynomialTests.cs" />
-    <Compile Include="Test\RefactoredBubbleSortTestsNUnit.cs" />
+    <Compile Include="Task_1\WordFormatProvider.cs" />
+    <Compile Include="Task_2\TitleCaseClass.cs" />
+    <Compile Include="Task_3\UrlParameterClass.cs" />
+    <Compile Include="Task_4\UniqueInOrderClass.cs" />
+    <Compile Include="Task_5\ReverseWordsClass.cs" />
+    <Compile Include="Task_6\BigNumbersSumClass.cs" />
+    <Compile Include="Tests\BigNumbersSumTestsNUnit.cs" />
+    <Compile Include="Tests\CustomerClassTestsNUnit.cs" />
+    <Compile Include="Tests\ReverseWordsTestsNUnit.cs" />
+    <Compile Include="Tests\TitleCaseTestNUnit.cs" />
+    <Compile Include="Tests\UniqueInOrderTestNUnit.cs" />
+    <Compile Include="Tests\UrlParameterClassTestsNUnit.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Izh-08_tasks.ruleset" />
+    <None Include="Izh-09_tasks.ruleset" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
