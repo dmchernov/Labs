@@ -8,12 +8,12 @@ namespace Izh_05_tasks
         /// Нахождение корня числа number степени power с точностю accuracy.
         /// </summary>
         /// <param name="number">Число.</param>
-        /// <param name="power">Корень.</param>
+        /// <param name="power">Степень корня.</param>
         /// <param name="accuracy">Точность.</param>
-        /// <returns>Результат.</returns>
-        public static decimal FindNthRoot(double number, double power, double accuracy)
+        /// <returns>Корень числа с заданной точностью.</returns>
+        public static decimal FindNthRoot(double number, int power, double accuracy)
         {
-            if (accuracy < 0 || (number < 0 && (power % 2) == 0 ))
+            if (accuracy < 0 || (number < 0 && (power % 2) == 0) || power < 0)
             {
                throw new ArgumentOutOfRangeException();
             }
@@ -50,7 +50,7 @@ namespace Izh_05_tasks
         /// <param name="y"></param>
         /// <param name="number"></param>
         /// <returns></returns>
-        private static double Fx(double x, double y, double number)
+        private static double Fx(double x, int y, double number)
         {
             return System.Math.Pow(x, y) - number;
         }
@@ -61,7 +61,7 @@ namespace Izh_05_tasks
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        private static double DFx(double x, double y)
+        private static double DFx(double x, int y)
         {
             return y * System.Math.Pow(x, y - 1);
         }

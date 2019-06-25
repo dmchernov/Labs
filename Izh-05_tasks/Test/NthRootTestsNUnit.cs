@@ -14,14 +14,15 @@ namespace Izh_05_tasks.Test
         [TestCase(0.0081, 4, 0.1, ExpectedResult = 0.3)]
         [TestCase(-0.008, 3, 0.1, ExpectedResult = -0.2)]
         [TestCase(0.004241979, 9, 0.00000001, ExpectedResult = 0.545)]
-        public decimal FindNthRootTestMethod(double number, double power, double accuracy)
+        public decimal FindNthRootTestMethod(double number, int power, double accuracy)
         {
             return NthRootClass.FindNthRoot(number, power, accuracy);
         }
 
         [TestCase(-0.01, 2, 0.0001)]
         [TestCase(0.01, 2, -1)]
-        public void FindNthRoot_Number_Degree_Precision_ArgumentOutOfRangeException(double number, double power, double accuracy)
+        [TestCase(4.0, -2, 0.0001)]
+        public void FindNthRoot_Number_Degree_Precision_ArgumentOutOfRangeException(double number, int power, double accuracy)
         {
             Assert.That(() => NthRootClass.FindNthRoot(number, power, accuracy), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
