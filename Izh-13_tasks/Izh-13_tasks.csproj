@@ -6,17 +6,19 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81D4462A-8ECA-4E27-B172-BB88D5BBAAD9}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{E27E9CB5-532C-49E3-BD58-FEB53737BE79}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Izh_12_tasks</RootNamespace>
-    <AssemblyName>Izh-12_tasks</AssemblyName>
+    <RootNamespace>Izh_13_tasks</RootNamespace>
+    <AssemblyName>Izh-13_tasks</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +26,17 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\Izh-13_tasks\Izh-13_tasks.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>Izh-13_tasks.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>..\Izh-13_tasks\Izh-13_tasks.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>Izh-13_tasks.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
@@ -50,30 +53,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task_1\BinarySearchClass.cs" />
-    <Compile Include="Task_2\WordFrequencyClass.cs" />
-    <Compile Include="Task_3\FibonacciCountClass.cs" />
-    <Compile Include="Task_4\CustomQueue.cs" />
-    <Compile Include="Task_5\CustomStack.cs" />
-    <Compile Include="Task_6\Set.cs" />
-    <Compile Include="Task_7\BinarySearchTree.cs" />
-    <Compile Include="Task_7\Book.cs" />
-    <Compile Include="Task_7\PluginComparers.cs" />
-    <Compile Include="Task_7\Point.cs" />
-    <Compile Include="Task_8\Calculator.cs" />
-    <Compile Include="Tests\BinarySearchTestsNUnit.cs" />
-    <Compile Include="Tests\BinarySearchTreeTestsNUnit.cs" />
-    <Compile Include="Tests\FibonacciCountClassTestsNUnit.cs" />
-    <Compile Include="Tests\QueueClassTestsNUnit.cs" />
-    <Compile Include="Tests\ReversePolishNotationCalculatorTestsNUnit.cs" />
-    <Compile Include="Tests\SetClassTestsNUnit.cs" />
-    <Compile Include="Tests\StackClassTestsNUnit.cs" />
-    <Compile Include="Tests\WordFrequencyTestsNUnit.cs" />
+    <Compile Include="QueryExtensions.cs" />
+    <Compile Include="TestResult.cs" />
+    <Compile Include="Tests\TestsResultsQueryTestsNUnit.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Izh-12_tasks.ruleset" />
+    <None Include="App.config" />
+    <None Include="Izh-13_tasks.ruleset" />
     <None Include="packages.config" />
+    <None Include="TestResult.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Izh-12_tasks\Izh-12_tasks.csproj">
+      <Project>{81d4462a-8eca-4e27-b172-bb88d5bbaad9}</Project>
+      <Name>Izh-12_tasks</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -81,20 +81,6 @@
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Tests\WordFrequency_TestText.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Tests\WordFrequency_TestText_BlankStringsOnly.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Tests\WordFrequency_TestText_Empty.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Tests\WordFrequency_TestText_RuEn.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
