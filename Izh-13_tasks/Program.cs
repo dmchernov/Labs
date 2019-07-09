@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Izh_12_tasks.Task_7;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
 
 namespace Izh_13_tasks
 {
@@ -40,6 +35,12 @@ namespace Izh_13_tasks
             do
             {
                 var query = bst.Inorder(bst.rootNode);
+
+                Console.WriteLine("Задайте критерии для фильтрации и сортировки выборки.");
+                Console.WriteLine("Для того, чтобы не задавать критерий можно просто нажать Enter.");
+                Console.WriteLine("В критериях фильтрации по дате и оценке можно указывать как конкретное значение, так и диапазон.");
+                Console.WriteLine("Возможные форматы указания даты: \"ДД.ММ.ГГГГ\", \">ДД.ММ.ГГГГ\", \"<ДД.ММ.ГГГГ\", \"\"<ДД.ММ.ГГГГ>ДД.ММ.ГГГГ\"");
+                Console.WriteLine("Возможные форматы указания оценки: \"3\", \">3\", \"<3\", \">3<5\"");
 
                 query = GetStudentNameFilter(query);
                 query = GetTestNameFilter(query);
@@ -150,11 +151,6 @@ namespace Izh_13_tasks
 
             return query;
         }
-
-        //private static IEnumerable<TestResult> GetSortDirection(IEnumerable<TestResult> query)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         private static IEnumerable<TestResult> GetAssessmentFilter(IEnumerable<TestResult> query)
         {
