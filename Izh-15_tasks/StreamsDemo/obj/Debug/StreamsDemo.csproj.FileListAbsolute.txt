@@ -1,0 +1,21 @@
+C:\Users\MIB\Desktop\StreamsTask2017\StreamsDemo\obj\Debug\StreamsDemo.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\StreamsTask2017\StreamsDemo\bin\Debug\StreamsDemo.dll
+C:\Users\MIB\Desktop\StreamsTask2017\StreamsDemo\bin\Debug\StreamsDemo.pdb
+C:\Users\MIB\Desktop\StreamsTask2017\StreamsDemo\obj\Debug\StreamsDemo.dll
+C:\Users\MIB\Desktop\StreamsTask2017\StreamsDemo\obj\Debug\StreamsDemo.pdb
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\StreamsDemo\bin\Debug\StreamsDemo.dll
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\StreamsDemo\bin\Debug\StreamsDemo.pdb
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\StreamsDemo\obj\Debug\StreamsDemo.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\StreamsDemo\obj\Debug\StreamsDemo.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\StreamsDemo\obj\Debug\StreamsDemo.dll
+C:\Users\MIB\Desktop\New tasks for Spring training 2018\StreamsTask2017\StreamsDemo\obj\Debug\StreamsDemo.pdb
+G:\DEV\Tasks\M13.Streams.Task\StreamsDemo\bin\Debug\StreamsDemo.dll
+G:\DEV\Tasks\M13.Streams.Task\StreamsDemo\bin\Debug\StreamsDemo.pdb
+G:\DEV\Tasks\M13.Streams.Task\StreamsDemo\obj\Debug\StreamsDemo.csprojResolveAssemblyReference.cache
+G:\DEV\Tasks\M13.Streams.Task\StreamsDemo\obj\Debug\StreamsDemo.dll
+G:\DEV\Tasks\M13.Streams.Task\StreamsDemo\obj\Debug\StreamsDemo.pdb
+G:\DEV\Tasks\Izh-04\Izh-04_tasks\Izh-15_tasks\StreamsDemo\bin\Debug\StreamsDemo.dll
+G:\DEV\Tasks\Izh-04\Izh-04_tasks\Izh-15_tasks\StreamsDemo\bin\Debug\StreamsDemo.pdb
+G:\DEV\Tasks\Izh-04\Izh-04_tasks\Izh-15_tasks\StreamsDemo\obj\Debug\StreamsDemo.csprojResolveAssemblyReference.cache
+G:\DEV\Tasks\Izh-04\Izh-04_tasks\Izh-15_tasks\StreamsDemo\obj\Debug\StreamsDemo.dll
+G:\DEV\Tasks\Izh-04\Izh-04_tasks\Izh-15_tasks\StreamsDemo\obj\Debug\StreamsDemo.pdb
