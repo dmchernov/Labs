@@ -32,6 +32,12 @@ namespace Izh_08_tasks.Polynomials
             Array.Sort(this.exponents, this.coefficients);
         }
 
+        public struct PolynomialDivisionResult
+        {
+            public Polynomial quotient;
+            public Polynomial remainder;
+        }
+
         /// <summary>
         /// Степень полинома.
         /// </summary>
@@ -76,6 +82,31 @@ namespace Izh_08_tasks.Polynomials
             }
 
             return a + b;
+        }
+
+        public static PolynomialDivisionResult operator /(Polynomial a, Polynomial b)
+        {
+            if (IsZero(b))
+            {
+                throw new DivideByZeroException();
+            }
+
+            PolynomialDivisionResult w = default(PolynomialDivisionResult);
+
+            Polynomial q = new Polynomial(new double[] { 0 }, new uint[] { 0 });
+            Polynomial r = a;
+            Polynomial t;
+
+            while (!IsZero(r) && (r.Degree >= b.Degree))
+            {
+                t = new Polynomial(new double[] { (r.coefficients[r.coefficients.Length - 1] / b.coefficients[b.coefficients.Length - 1]) }, new uint[] { (r.exponents[r.exponents.Length - 1] - b.exponents[b.exponents.Length - 1]) });
+                q = q + t;
+                r = r - (t * b);
+            }
+
+            w.quotient = q;
+            w.remainder = r;
+            return w;
         }
 
         /// <summary>
@@ -192,6 +223,11 @@ namespace Izh_08_tasks.Polynomials
             newCoef.Add(Math.Round(tmpCoef, 10));
 
             return new Polynomial(newCoef.ToArray(), newExp.ToArray());
+        }
+
+        private static bool IsZero(Polynomial p)
+        {
+            return p.coefficients.Length == 1 && p.coefficients[0] == 0;
         }
     }
 }

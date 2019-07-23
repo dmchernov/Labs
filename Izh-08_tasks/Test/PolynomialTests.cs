@@ -109,5 +109,31 @@ namespace Izh_08_tasks.Test
             Polynomial result = a * b;
             Assert.That(result.Equals(expectedResult));
         }
+
+        static object[] DivisionTestData = new object[]
+            {
+                new object[]
+                {
+                new Polynomial(new double[] { 1, -2.0, -4.0 }, new uint[] { 3, 2, 0 }),
+                new Polynomial(new double[] { 1.0, -3.0 }, new uint[] { 1, 0 }),
+                new Polynomial(new double[] { 1.0, 1.0, 3.0 }, new uint[] { 2, 1, 0 }),
+                new Polynomial(new double[] { 5.0 }, new uint[] { 0 })
+                },
+                new object[]
+                {
+                new Polynomial(new double[] { 2.0, -1.0, 12.0, -72.0, 3.0 }, new uint[] { 6, 5, 3, 2, 0 }),
+                new Polynomial(new double[] { 1.0, 2.0, -1.0 }, new uint[] { 3, 2, 0 }),
+                new Polynomial(new double[] { 2.0, -5.0, 10.0, -6.0 }, new uint[] { 3, 2, 1, 0 }),
+                new Polynomial(new double[] { -65.0, 10.0, -3.0 }, new uint[] { 2, 1, 0 })
+                },
+            };
+
+        [TestCaseSource("DivisionTestData")]
+        public void Polynomial_Division_Test(Polynomial a, Polynomial b, Polynomial expectedQuotient, Polynomial expectedRemainder)
+        {
+            Polynomial.PolynomialDivisionResult result = a / b;
+            Assert.That(result.quotient.Equals(expectedQuotient));
+            Assert.That(result.remainder.Equals(expectedRemainder));
+        }
     }
 }

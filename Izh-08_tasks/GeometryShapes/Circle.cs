@@ -13,7 +13,7 @@ namespace Izh_08_tasks.GeometryShapes
 
         public override double Area()
         {
-            return 2 * Math.PI * this.radius * this.radius;
+            return Math.PI * this.radius * this.radius;
         }
 
         public override double Perimeter()
