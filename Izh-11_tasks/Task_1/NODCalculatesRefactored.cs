@@ -47,7 +47,7 @@ namespace Izh_11_tasks.Task_1
 
             int iter = CalculateNOD(findType, digits[0], digits[1]);
 
-            for (int i = digits.Length - 1; i < digits.Length; i++)
+            for (int i = 2; i < digits.Length; i++)
             {
                 iter = CalculateNOD(findType, iter, digits[i]);
             }

@@ -39,6 +39,8 @@ namespace Izh_11_tasks.Tests
         [TestCase(FindNODType.Stein, 78, 294, 570, 36, ExpectedResult = 6)]
         [TestCase(FindNODType.Stein, 78, 294, 570, 36, 4, ExpectedResult = 2)]
         [TestCase(FindNODType.Stein, 78, 294, 570, 36, 11, ExpectedResult = 1)]
+        [TestCase(FindNODType.Stein, 516, 1002, 903, 240, 5904, 6010101, 882, 6873, 2001, 20001, 4010202, 666, ExpectedResult = 3)]
+        [TestCase(FindNODType.Euclid, 903, 516, 1002, 240, 5904, 6010101, 882, 6873, 2001, 20001, 4010202, 666, ExpectedResult = 3)]
         public int FindNODRefactored_Params_Test(FindNODType findType, params int[] digits)
         {
             return NODCalculatesRefactored.CalculateNOD(findType, digits);
