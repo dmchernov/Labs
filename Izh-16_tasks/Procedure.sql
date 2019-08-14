@@ -115,7 +115,7 @@ RETURNS bit
 AS
 BEGIN
 
-return(Select case when ReportsTo is not null then 0 else 1 end from Employees where EmployeeID = @EmployeeID);
+return(Select case when count(*) > 0 then 1 else 0 end from Employees where ReportsTo = @EmployeeID);
 
 END;
 GO
